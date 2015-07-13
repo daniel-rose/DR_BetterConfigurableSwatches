@@ -1,6 +1,10 @@
 DR_BetterConfigurableSwatches
 =============================
-Beschreibung
+Extends the magento module "Mage_ConfigurableSwatches" with the following functions:
+
+ * Swatches on product list will be loaded by ajax (performance enhancement)
+
+ * The media block on product view will be changed by using swatches
 
 Installation
 -------
@@ -15,9 +19,9 @@ For installing this module, it gives various ways:
 
 * composer
 
-  Add the following line to the file „composer.json“:
+  Add the following line to the file "composer.json":
 
-  `'dr/email-templating': '>=1.0.0'`
+  `"dr/better-configurable-swatches": "*"`
 
 * copy/paste
 

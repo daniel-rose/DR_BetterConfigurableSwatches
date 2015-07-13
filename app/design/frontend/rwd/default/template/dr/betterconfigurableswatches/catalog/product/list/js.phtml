@@ -1,0 +1,26 @@
+<?php
+    $url = $this->getUrlForReceivingSwatches();
+    $activeFilters = $this->getActiveFilters();
+?>
+
+<script type="text/javascript">
+    jQuery('.products-grid .item, .products-list .item').each(function() {
+        var item = jQuery(this);
+        var img = item.find('img');
+        var productId = img.attr('id').replace(/(\w*\-)*/, '');
+
+        jQuery.ajax({
+            url: '<?php echo $url ?>',
+            type: 'GET',
+            data: {
+                <?php if(is_array($activeFilters) && count($activeFilters) > 0): ?>
+                    active_filters: <?php echo Mage::helper('core')->jsonEncode($activeFilters) ?>,
+                <?php endif; ?>
+                product_id: productId
+            }, success: function(data) {
+                item.find('.product-name').after(data);
+                ConfigurableSwatchesList.init();
+            }
+        });
+    });
+</script>

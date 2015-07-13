@@ -1,0 +1,15 @@
+{
+  "name": "dr/better-configurable-swatches",
+  "type": "magento-module",
+  "description": "Use ajax to load swatches on product list and change gallery images on product view.",
+  "license": "OSL-3.0",
+  "authors": [
+    {
+      "name": "Daniel Rose",
+      "email": "daniel-rose@gmx.de"
+    }
+  ],
+  "require": {
+    "magento-hackathon/magento-composer-installer": "*"
+  }
+}

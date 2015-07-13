@@ -1,0 +1,6 @@
+app/code/community/DR/*                         app/code/community/DR/
+app/design/frontend/rwd/default/template/dr/*   app/design/frontend/rwd/default/template/dr/
+app/design/frontend/rwd/default/layout/*        app/design/frontend/rwd/default/layout/
+app/etc/modules/*                               app/etc/modules/
+
+skin/frontend/rwd/default/js/dr/*               skin/frontend/rwd/default/js/dr/

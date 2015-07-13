@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <DR_BetterConfigurableSwatches>
+            <version>1.0.0</version>
+        </DR_BetterConfigurableSwatches>
+    </modules>
+
+    <global>
+        <blocks>
+            <dr_betterconfigurableswatches>
+                <class>DR_BetterConfigurableSwatches_Block</class>
+            </dr_betterconfigurableswatches>
+        </blocks>
+
+        <helpers>
+            <dr_betterconfigurableswatches>
+                <class>DR_BetterConfigurableSwatches_Helper</class>
+            </dr_betterconfigurableswatches>
+        </helpers>
+    </global>
+
+    <frontend>
+        <layout>
+            <updates>
+                <dr_betterconfigurableswatches>
+                    <file>dr_betterconfigurableswatches.xml</file>
+                </dr_betterconfigurableswatches>
+            </updates>
+        </layout>
+        <routers>
+            <dr_betterconfigurableswatches>
+                <use>standard</use>
+                <args>
+                    <frontName>dr_betterconfigurableswatches</frontName>
+                    <module>DR_BetterConfigurableSwatches</module>
+                </args>
+            </dr_betterconfigurableswatches>
+        </routers>
+    </frontend>
+</config>

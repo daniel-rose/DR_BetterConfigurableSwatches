@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+    <dr_betterconfigurableswatches_ajax_getswatches>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="dr_betterconfigurableswatches/catalog_product_list_item_swatches"
+                   name="catalog.product.list.item.swatches" as="swatches"
+                   template="dr/betterconfigurableswatches/catalog/product/list/item/swatches.phtml"/>
+        </block>
+    </dr_betterconfigurableswatches_ajax_getswatches>
+
+    <product_list>
+        <reference name="product_list.name.after">
+            <action method="unsetChild">
+                <child>product_list.swatches</child>
+            </action>
+        </reference>
+        <reference name="product_list.after">
+            <block type="dr_betterconfigurableswatches/catalog_product_list_js" name="catalog.product.list.js"
+                   template="dr/betterconfigurableswatches/catalog/product/list/js.phtml"/>
+        </reference>
+    </product_list>
+
+    <PRODUCT_TYPE_configurable>
+        <reference name="head">
+            <action method="addItem"><type>skin_js</type><name>js/dr/betterconfigurableswatches/product-media.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/dr/betterconfigurableswatches/swatches-product.js</name></action>
+        </reference>
+
+        <reference name="product.info.media.after">
+            <block type="dr_betterconfigurableswatches/catalog_product_view_media_js"
+                   name="catalog.product.view.media.js"
+                   template="dr/betterconfigurableswatches/catalog/product/view/media/js.phtml"/>
+        </reference>
+    </PRODUCT_TYPE_configurable>
+
+    <dr_betterconfigurableswatches_ajax_getmedia>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="catalog/product_view_media" name="product.info.media" as="media" template="catalog/product/view/media.phtml">
+                <block type="core/text_list" name="product.info.media.after" as="after" />
+            </block>
+        </block>
+    </dr_betterconfigurableswatches_ajax_getmedia>
+</layout>
